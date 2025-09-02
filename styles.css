@@ -1,0 +1,555 @@
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(148, 195, 209);
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+body {
+    background-color: beige;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+
+}
+
+
+#weeklist {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    color: black;
+    padding: 50px;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    /*read about this a while ago seeing if it will work*/
+}
+
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(148, 195, 209);
+    padding: 10px;
+    z-index: 1000;
+}
+
+/*this is still ugly blocky can not figure out how to round it*/
+.menu {
+    background-color: #333;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+
+.menu a {
+    color: white;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    flex: 1;
+    display: block;
+}
+
+
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.menu a.active {
+    background-color: #aa0420;
+    color: white;
+}
+
+
+#about {
+    justify-content: center;
+    padding: 20px;
+}
+
+/*adding custom handling having issues with the amount of data messing with the menu system trying to see if i can make it work*/
+#phpi {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+
+#contact {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    padding: 50px;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.pic {
+    display: flex;
+    align-items: flex-start;
+    /*trying to get the text to look good by the pic*/
+}
+
+.pic img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#bio {
+    text-align: left
+}
+
+#toplevel {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#midlevel {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lowlevelright {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+#lowlevelleft {
+    display: flex;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#getchoice {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#postchoice {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.form img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#error {
+    color: red;
+    padding: 20px;
+
+}
+
+#results {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+
+}
+
+#results th {
+
+    color: black;
+    border: 1px solid black;
+
+    padding: 10px;
+    text-align: left;
+}
+
+
+#results td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+
+#results tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#head {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(148, 195, 209);
+    padding: 10px;
+    z-index: 1000;
+}
+
+/*Menu subsystem still playing had to modify due to adding too many screans*/
+#menu_cms {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /
+}
+
+#menu_cms li {
+    
+    margin: 0px;
+}
+
+#menu_cms a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: block;
+    text-align: center;
+    background-color: #f4f4f4; 
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+    font-size: 12px;
+}
+
+#menu_cms a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+
+.form_login {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formmail {
+    display: flex;
+    width: 400px;
+    height: 100px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#title {
+    display: flex;
+    left: 50%;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.product {
+    padding: 50px;
+}
+
+.product img {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+
+}
+
+.product-button {
+    margin-left: 40px;
+}
+
+.product_cart {
+    padding: 20px;
+}
+
+/*want these buttons to stand out*/
+#checkout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.checkout {
+    padding: 10px 20px;
+
+}
+
+#review {
+
+
+    margin-left: 40px;
+
+    font-weight: bold;
+
+}
+
+#vendors {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
+.formprayer {
+    display: flex;
+    width: 400px;
+    height: 125px;
+    border: 10px solid black;
+    background-color: #f7f7f7;
+    justify-content: left;
+    align-items: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome {
+    display: block;
+
+    padding: 0;
+    margin-left: 100px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+
+}
+/*playing with these setting as the org chart styling is doing weird things to the form*/
+.formcomments {
+    display: flex;
+    justify-content:
+        center;
+    align-items: center;
+    margin-top: 500px;  
+    margin-left: 30%;
+    width: 40%;   
+    height: auto;
+    overflow: auto
+}
+
+.formcomments form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formcomments form div {
+    margin-bottom: 10px;
+}
+
+.formcomments form label {
+    margin-bottom: 5px;
+}
+
+.formcomments form input[
+    type="text"],
+.formcomments form input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.commenttable{
+    display: flex;
+    justify-content:
+        center;
+    align-items: center;
+    margin-top: 100px;  
+    margin-left: 10%;
+    width: 80%;   
+    height: auto;
+    overflow: auto
+}
+#comments {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow: auto
+}
+
+#comments th {
+
+    color: black;
+    border: 1px solid black;
+   
+    padding: 10px;
+    text-align: left;
+    width: 40%;
+}
+
+
+#comments td {
+    border: 1px solid black;
+    padding: 8px;
+    width: 40%;
+
+}
+
+
+#comments tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+#comments th:nth-child(1),
+#comments td:nth-child(1) {
+    width: 20%;
+}
+
+#comments th:nth-child(2),
+#comments td:nth-child(2) {
+    width: 10%; 
+}
+#comments th:nth-child(3),
+#comments td:nth-child(3) {
+    width: 30%; 
+}
+#comments th:nth-child(3),
+#comments td:nth-child(3) {
+    width: 20%; 
+}
+#comments th:nth-child(4),
+#comments td:nth-child(4) {
+    width: 80%; 
+}
+.useradmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh; 
+}
+
+.useradmin .button {
+    padding: 10px 20px; 
+    border: 2px outset; 
+    border-radius: 5px;
+    color: ButtonText;
+    background-color: ButtonFace;
+    text-decoration: none;
+    margin: 10px 0; 
+    font-size: 16px; 
+}
+.user-table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0; 
+    font-family: Arial, sans-serif; 
+}
+
+
+.user-table th {
+    background-color: #4ca2af; 
+    color: white; 
+    padding: 12px; 
+    text-align: left;
+    font-weight: bold; 
+}
+
+
+.user-table td {
+    padding: 8px; 
+    text-align: left; 
+    border: 1px solid #ddd; /
+}
+
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+
+.user-table tr:hover {
+    background-color: #ddd; 
+}
+
+
+.user-table td a {
+    color: #4c66af;
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 5px;
+}
+
+
+.user-table td a:hover {
+    color: #3e57b8; 
+}

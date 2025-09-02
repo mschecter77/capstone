@@ -1,0 +1,25 @@
+<?php
+$mname="Michael Schecter";
+$jname ="Jacquita Schecter";
+$ename="Elijah Schecter";
+$aname="Athena Schecter";
+$jpic ="jacky.jpg";
+$epic = "eli.jpg";
+$mpic ="michael.jpg";
+$apic = "athena.jpg";
+$mtitle = "Owner";
+$jtitle = "Co-Owner";
+$etitle = "Jr IT";
+$atitle= "Security";
+$mhobbys = array("Reading","Spending time with family","Tinkering with software projects","Driving the family crazy");
+$jhobbys = array("Photography","Cooking","Keeping the family organized");
+$ehobbys = array("Video Games","Reading","Computer programming");
+$ahobbys = array("Sleeping","Eating","Chasing anything and everything in the yard");
+$mquote = "If momma aint happy, no one is happy!";
+$jquote = "These boys are driving me crazy.";
+$equote = "I am not playing video games I am working really.";
+$aquote = "Woof.";
+$mpage = "mschecter.php";
+$jpage = "jschecter.php";
+$epage ="eschecter.php";
+$apage ="aschecter.php";
